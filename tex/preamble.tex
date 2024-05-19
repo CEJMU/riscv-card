@@ -1,5 +1,10 @@
-\usepackage[margin=0.75in]{geometry}
-% \usepackage[utf8]{inputenc}
+\usepackage[
+    left=1cm,
+    right=1cm,
+    top=3cm,
+    bottom=1.5cm,
+    includefoot
+    ]{geometry}  
 \usepackage[T1]{fontenc}
 \usepackage{fetamont}
 \usepackage{inconsolata}
@@ -8,8 +13,32 @@
 \usepackage{graphics}
 \usepackage{multirow}
 \usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage[no-math]{fontspec}
+\usepackage{tabularray}
+\usepackage[
+    type={CC},
+    modifier={by},
+    version={4.0},
+]{doclicense}
 
 \graphicspath{img}
+
+\usepackage{background}
+\backgroundsetup{scale = 1, angle = 0, opacity = 1.0, contents = {\includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio]{img/bg_en}}}
+
+% Schriften:
+\defaultfontfeatures[FFMetaPro]
+{
+    Extension = .TTF,
+    UprightFont = FFMetaProLight,
+    ItalicFont = FFMetaProLightIt,
+    BoldFont = FFMetaProBold,
+    BoldItalicFont = FFMetaProBoldIt
+}
+\setsansfont{FFMetaPro}
+\renewcommand{\familydefault}{\sfdefault} 
+
 
 % New column types to use in tabular environment for instruction formats.
 % Allocate 0.18in per bit.
@@ -54,20 +83,19 @@
 %% Header / Footer %%
 
 \newcommand{\headerfont}{\fontfamily{lmr}\selectfont}
-\pagestyle{fancy}
-\headheight=24pt
-\footskip=24pt
-\lhead{\headerfont RISC-V Reference Card}
-\rhead{\headerfont V0.1}
-\rfoot{(c) James Zhu, 2018}
+%\pagestyle{fancy}
+%\headheight=24pt
+%\footskip=24pt
+%\lhead{\headerfont RISC-V Reference Card}
+%\rhead{\headerfont V0.2}
+%\rfoot{CE JMU 2024}
 
 %% Title %%
-
-\pretitle{\vspace{-0.75in}\begin{center} \huge \ffmfamily \bfseries}
+\pretitle{\vspace{-0.75in}\begin{center} \huge \sffamily \bfseries}
 \title{RISC-V Reference}
 \posttitle{\end{center}}
 \preauthor{\begin{center} \sffamily}
-\author{James Zhu <jameszhu@berkeley.edu>}
+\author{Matthias Jung <\href{mailto:m.jung@uni-wuerzburg.de}{m.jung@uni-wuerzburg.de}>}
 \postauthor{\end{center}}
 \predate{}
 \date{}

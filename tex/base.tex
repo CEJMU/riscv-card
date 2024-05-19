@@ -70,8 +70,8 @@
 \subsection*{RV32I Base Integer Instructions}
 
 \begin{tabular}
-{T | l | c | T | T | T | T | l} \hline
-\rm Inst & Name                    & FMT & \rm Opcode & \rm funct3 & \rm funct7 & \rm Description (C)          & Note \\ \hline
+{| T | l | c | T | T | T | T | l |} \hline
+\rmfamily Inst & Name                    & FMT & \rmfamily Opcode & \rmfamily funct3 & \rmfamily funct7 & \rmfamily Description (C)          & Note \\ \hline
 add      & ADD                     & R   & 0110011    & 0x0    & 0x00   & rd = rs1 + rs2               & \\
 sub      & SUB                     & R   & 0110011    & 0x0    & 0x20   & rd = rs1 - rs2               & \\
 xor      & XOR                     & R   & 0110011    & 0x4    & 0x00   & rd = rs1 \^{} rs2            & \\
@@ -113,3 +113,13 @@ ecall    & Environment Call        & I   & 1110011    & 0x0    & imm=0x0 & Trans
 ebreak   & Environment Break       & I   & 1110011    & 0x0    & imm=0x1 & Transfer control to debugger & \\ \hline
 
 \end{tabular}
+
+\vspace{1pt}\noindent\begin{minipage}{0.83\linewidth}
+    \doclicenseText The original code was provided by James Zhu
+    (\url{https://github.com/jameslzhu/riscv-card}) and was adopted for the
+    usage in the Computer Architecture lecture of JMU Würzburg (\url{https://github.com/CEJMU/riscv-card})
+\end{minipage}
+\hfil
+\begin{minipage}{0.13\linewidth}
+     \doclicenseImage
+\end{minipage}
